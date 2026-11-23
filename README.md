@@ -62,4 +62,4 @@ pip install torch torchvision opencv-python numpy pandas scipy scikit-learn matp
 - Amato, G. et al. (2023). *Remote Sensing* 15(15), 3718.
 - Shakir et al. (2026). DCNNVA. *International Journal of Advances in Applied Sciences* 15(1), 281-292. https://doi.org/10.11591/ijaas.v15.i1.pp281-292
 
-Developed with assistance from Claude and Google Gemini.
+**Collaborators:** Claude and Google Gemini.
