@@ -39,27 +39,29 @@ Confusion matrix: TN 300, FP 0, FN 13, TP 287. A 7-view test-time augmentation r
 - `Volcanic_Activity.ipynb`: the full notebook (data, model, training, evaluation, diagnostics, benchmark, results).
 - `outputs/plots/`: saved figures.
 
-The **the model checkpoint is not included.**
+The **model checkpoint and the dataset are not included in this repository.**
 
 ## Dataset
 
-Volcanic (Sentinel-2 and Landsat-8 patches, 224×224), from Amato et al. (2023), on Zenodo: https://doi.org/10.5281/zenodo.7944343
+3,200 Sentinel-2 and Landsat-8 patches (224×224) of active and dormant volcanoes:
 
-Volcanic_V2 dataset not included in the repository
+- **Volcanic_V2:** 3,000 patches (2,400 training pool + 600 test, balanced).
+- **Volcanic (V1):** 200 patches, used only as an out-of-distribution test.
 
-Download it and place it under `data/`. The notebook finds the `train/` and `test/` folders automatically (each has `YesActivity/` and `NoActivity/`).
+Sources:
+- **Original source:** Amato, E.; Corradino, C.; Torrisi, F.; Del Negro, C. (2023). SqueezeNet_Dataset_TransferLearning. Zenodo (CC BY 4.0). https://doi.org/10.5281/zenodo.7944343
+- **Copy used for this project:** "Volcanic Thermal Activity" on Kaggle (uploader: yasserhessein): https://www.kaggle.com/datasets/yasserhessein/volcanic-thermal-activity
+
+Download the data and put the zip (or the extracted folder) in the working directory. The notebook unzips it and finds the `train/` and `test/` folders automatically (each has `YesActivity/` and `NoActivity/`). Check the license on each page before reusing the data.
 
 ## How to run
 
-```bash
-pip install torch torchvision opencv-python numpy pandas scipy scikit-learn matplotlib seaborn pillow
-```
-
 - **Notebook:** open it in Jupyter or Colab and run the cells in order. A GPU is recommended for training (T4 GPU in Colab).
+- **Requirements:** `torch`, `torchvision`, `opencv-python`, `numpy`, `pandas`, `scipy`, `scikit-learn`, `matplotlib`, `seaborn`, `pillow`.
 
 ## References
 
-- Amato, G. et al. (2023). *Remote Sensing* 15(15), 3718.
+- Amato, E.; Corradino, C.; Torrisi, F.; Del Negro, C. (2023). A Deep Convolutional Neural Network for Detecting Volcanic Thermal Anomalies from Satellite Images. *Remote Sensing* 15(15), 3718. https://doi.org/10.3390/rs15153718
 - Shakir et al. (2026). DCNNVA. *International Journal of Advances in Applied Sciences* 15(1), 281-292. https://doi.org/10.11591/ijaas.v15.i1.pp281-292
 
 **Collaborators:** Claude and Google Gemini.
