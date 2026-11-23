@@ -45,7 +45,7 @@ The **the model checkpoint is not included.**
 
 Volcanic (Sentinel-2 and Landsat-8 patches, 224×224), from Amato et al. (2023), on Zenodo: https://doi.org/10.5281/zenodo.7944343
 
-Volcanic_V2: data.zip
+Volcanic_V2 dataset not included in the repository
 
 Download it and place it under `data/`. The notebook finds the `train/` and `test/` folders automatically (each has `YesActivity/` and `NoActivity/`).
 
